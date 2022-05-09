@@ -74,6 +74,7 @@ describe('group: exclusion', () => {
             "errorCount": 0,
             "errors": Array [],
             "testCount": 0,
+            "valid": false,
             "warnCount": 0,
             "warnings": Array [],
           },
@@ -81,6 +82,7 @@ describe('group: exclusion', () => {
             "errorCount": 0,
             "errors": Array [],
             "testCount": 0,
+            "valid": false,
             "warnCount": 0,
             "warnings": Array [],
           },
@@ -88,6 +90,7 @@ describe('group: exclusion', () => {
             "errorCount": 0,
             "errors": Array [],
             "testCount": 0,
+            "valid": false,
             "warnCount": 0,
             "warnings": Array [],
           },
@@ -95,6 +98,7 @@ describe('group: exclusion', () => {
             "errorCount": 0,
             "errors": Array [],
             "testCount": 0,
+            "valid": false,
             "warnCount": 0,
             "warnings": Array [],
           },
@@ -102,6 +106,7 @@ describe('group: exclusion', () => {
             "errorCount": 0,
             "errors": Array [],
             "testCount": 0,
+            "valid": false,
             "warnCount": 0,
             "warnings": Array [],
           },
@@ -262,9 +267,7 @@ describe('group: base case', () => {
     );
 
     // This one is equal since it has no tests outside the group
-    expect(_.omit(res.tests['field_6'], 'valid')).toEqual(
-      res.groups[groupName]['field_6']
-    );
+    expect(res.tests['field_6']).toEqual(res.groups[groupName]['field_6']);
   });
 
   test('Group object is a subset of test object (negating previous test)', () => {
