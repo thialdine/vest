@@ -20,7 +20,7 @@ function getByFieldName(
   severityKey: Severity,
   fieldName: string
 ): string[] {
-  return testGroup?.[fieldName]?.[severityKey] || [];
+  return testGroup?.[fieldName]?.[severityKey][0] || [];
 }
 
 function collectAll(
